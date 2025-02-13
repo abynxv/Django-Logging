@@ -1,0 +1,38 @@
+
+INFO 2025-02-13 11:05:29,140 basehttp 108743 124990326306496 "GET /api HTTP/1.1" 301 0
+INFO 2025-02-13 11:05:29,159 basehttp 108743 124990326306496 "GET /api/ HTTP/1.1" 200 44
+ERROR 2025-02-13 11:05:34,970 log 108743 124990326306496 Internal Server Error: /api
+Traceback (most recent call last):
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-02-13 11:05:34,972 basehttp 108743 124990326306496 "POST /api HTTP/1.1" 500 73618
+WARNING 2025-02-13 11:05:40,426 log 108743 124990326306496 Method Not Allowed: /api/
+WARNING 2025-02-13 11:05:40,427 basehttp 108743 124990326306496 "POST /api/ HTTP/1.1" 405 41
+ERROR 2025-02-13 11:06:06,989 log 108743 124990326306496 Internal Server Error: /api/tasks
+Traceback (most recent call last):
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 131, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abynxv/Django/Logging_Project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/tasks/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-02-13 11:06:06,989 basehttp 108743 124990326306496 "POST /api/tasks HTTP/1.1" 500 73714
+WARNING 2025-02-13 11:06:11,127 log 108743 124990326306496 Bad Request: /api/tasks/
+WARNING 2025-02-13 11:06:11,128 basehttp 108743 124990326306496 "POST /api/tasks/ HTTP/1.1" 400 37
+INFO 2025-02-13 11:06:33,667 basehttp 108743 124990326306496 "POST /api/tasks/ HTTP/1.1" 201 122

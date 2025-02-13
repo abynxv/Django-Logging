@@ -1,0 +1,12 @@
+.venv
+.vscode
+.idea
+.env
+tasks/migrations
+tasks/__pycache__
+__pycache__
+tenants
+media/
+venv/
+static/ 
+venv

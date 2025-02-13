@@ -1,0 +1,3 @@
+{"asctime": "2025-02-13 11:06:11,126", "levelname": "INFO", "name": "tasks", "message": "Creating new task", "task_data": {}}
+{"asctime": "2025-02-13 11:06:33,661", "levelname": "INFO", "name": "tasks", "message": "Creating new task", "task_data": {"title": "Task1"}}
+{"asctime": "2025-02-13 11:06:33,667", "levelname": "INFO", "name": "tasks", "message": "Function create took 0.01 seconds to execute", "function_name": "create", "execution_time": 0.006131649017333984}
