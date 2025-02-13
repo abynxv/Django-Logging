@@ -11,3 +11,4 @@ venv/
 static/ 
 venv
 db.sqlite
+logs/*.log
