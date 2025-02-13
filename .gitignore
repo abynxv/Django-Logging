@@ -10,5 +10,6 @@ media/
 venv/
 static/ 
 venv
+.sqlite3
 db.sqlite
 logs/*.log
